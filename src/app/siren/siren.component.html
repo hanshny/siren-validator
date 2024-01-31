@@ -1,0 +1,13 @@
+<div>
+      <label for="sirenInput">Numéro SIREN :</label>
+      <input id="sirenInput" [(ngModel)]="siren" placeholder="Entrez le numéro SIREN" />
+      <button (click)="validateSiren()">Valider</button>
+    </div>
+
+    <div *ngIf="isValidSiren && siren == ''">
+      <p>Le numéro SIREN {{ siren }} est valide.</p>
+    </div>
+
+    <div *ngIf="!isValidSiren && siren !== ''">
+      <p>Le numéro SIREN {{ siren }} n'est pas valide.</p>
+    </div>
