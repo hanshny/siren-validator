@@ -4,7 +4,7 @@
       <button (click)="validateSiren()">Valider</button>
     </div>
 
-    <div *ngIf="isValidSiren">
+    <div *ngIf="isValidSiren && siren == ''">
       <p>Le numéro SIREN {{ siren }} est valide.</p>
     </div>
 
